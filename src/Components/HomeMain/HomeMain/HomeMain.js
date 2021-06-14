@@ -6,22 +6,32 @@ import Banner from '../Banner/Banner';
 import CarrierBlog from '../CarrierBlog/CarrierBlog';
 import PracticalWork from '../PracticalWork/PracticalWork';
 import Joining from '../Joining/Joining';
+import Footer from '../../Footer/Footer';
 
 const HomeMain = () => {
     return (
         <div>
             <Greetings></Greetings>
+
             <Home></Home>
-            <hr />
+            <br />
+
             <Courses></Courses>
-            <hr />
+            <br />
+
             <Banner></Banner>
-            <hr />
+            <br />
+
             <CarrierBlog></CarrierBlog>
-            <hr />
+
             <PracticalWork></PracticalWork>
             <hr />
+
             <Joining></Joining>
+            <br />
+            <hr />
+
+            <Footer />
         </div>
     );
 };

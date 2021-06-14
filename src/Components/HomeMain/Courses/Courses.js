@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
-import Data from '../Data/Data';
+import Data from '../../Data/Data';
 import CourseDetails from './CourseDetails';
 
 const Courses = () => {
     const [data, setData] = useState(Data)
-    console.log(data)
+    //console.log(data)
     return (
-        <div>
-            <div>
-                <h2>We Provide Friendly and Marketable Online Courses</h2>
-                <div className="row">
-                    {
-                        data.map(data => {
-                            return (
+        <div className="mt-4">
 
-                                <CourseDetails key={data.id} data={data} />
+            <h2>We Provide Friendly and Marketable Online Courses</h2>
+            <div className="row">
+                {
+                    data.map(data => {
+                        return (
 
-                            )
-                        })
-                    }
-                </div>
+                            <CourseDetails key={data.id} data={data} />
+
+                        )
+                    })
+                }
             </div>
+
         </div>
     );
 };

@@ -1,23 +1,59 @@
 import React from 'react';
 import './App.css';
-import HomeMain from './Components/HomeMain/HomeMain/HomeMain';
-// import Banner from './Components/Banner/Banner';
-// import CarrierBlog from './Components/CarrierBlog/CarrierBlog';
-// import Courses from './Components/Courses/Courses';
-import Footer from './Components/Footer/Footer';
-// import Greetings from './Components/Greetings/Greetings';
-// import Home from './Components/Home/Home';
-// import Joining from './Components/Joining/Joining';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 import Navbar from './Components/Navbar/Navbar';
-// import PracticalWork from './Components/PracticalWork/PracticalWork';
+import HomeMain from './Components/HomeMain/HomeMain/HomeMain'
+import AllCourses from './Components/AllCourses/AllCourses'
+import CorporateCourse from './Components/CorporateCourse/CorporateCourse';
+import PrivacyPolicy from './Components/PrivacyPolicy/PrivacyPolicy';
+import RefundPolicy from './Components/RefundPolicy/RefundPolicy';
+import TermsCondition from './Components/TermsCondition/TermsCondition';
+
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
-      <HomeMain />
-      <hr />
-      <Footer />
+
+
+      <Router>
+        <Navbar />
+
+        <Switch>
+
+          <Route exact path="/">
+            <HomeMain />
+          </Route>
+
+          <Route path="/all-courses">
+            <AllCourses />
+          </Route>
+
+          <Route path="/co-e-learning">
+            <CorporateCourse />
+          </Route>
+
+          <Route path="/privacy-policy">
+            <PrivacyPolicy />
+          </Route>
+
+          <Route path="/refund-policy">
+            <RefundPolicy />
+          </Route>
+
+          <Route path="/terms-and-condition">
+            <TermsCondition />
+          </Route>
+        </Switch>
+      </Router>
+
+
+
     </div>
 
   );
